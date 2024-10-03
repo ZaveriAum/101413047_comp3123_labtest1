@@ -1,6 +1,10 @@
+// remove.js we check if the Logs fir exists it is does then we run a loop and delete all the files in them and log it.
+// At the end remove the directory as well.
+
 const fs = require('fs')
 const path = require('path')
 
+// getting the dirname form global variables
 let log_dir_path = path.join(__dirname, 'Logs')
 
 if(fs.existsSync(log_dir_path)){

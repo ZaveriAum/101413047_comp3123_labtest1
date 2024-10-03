@@ -1,6 +1,9 @@
+// add.js we check if the Logs directory exists if it does not then create it.
+// aftre dir creation we are running a loop 10 times and creating 10 files and writing in them.
 const fs = require('fs')
 const path = require('path')
 
+// using global varibale to get the path using __dirname
 let log_dir_path = path.join(__dirname, 'Logs')
 
 if(!fs.existsSync(log_dir_path)){

@@ -1,3 +1,5 @@
+// Taking inspiration from callbacks.js and returning only resolves and rejects
+
 const resolvedPromise = new Promise((res, rej)=>{
     setTimeout(()=>{
         res({'message':'delated success!'})
@@ -6,7 +8,7 @@ const resolvedPromise = new Promise((res, rej)=>{
 
 const rejectedPromise = new Promise((res, rej)=>{
     setTimeout(()=>{
-        rej('{ error: delayed exception }')
+        rej(new Error("{ error: 'delayed exception' }"))
     }, 500)
 })
 
@@ -21,6 +23,6 @@ rejectedPromise.then((res)=>{
     console.log(res)
 })
 .catch((error)=>{
-    console.log(error)
+    console.error(error.message)
 })
 

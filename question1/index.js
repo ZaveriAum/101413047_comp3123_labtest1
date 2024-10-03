@@ -1,3 +1,4 @@
+// lowerCareWords returns a promise if arr then try to filer strings and lowercase the elements and return those in resolve.
 const lowerCaseWords = (arr)=>{
     return new Promise((resolve, reject)=>{
         if(!Array.isArray(arr)){
